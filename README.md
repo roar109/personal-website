@@ -1,2 +1,2 @@
-rc-site-rb
+Personal web site made with sinatra and haml
 ==========
