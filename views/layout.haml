@@ -4,7 +4,7 @@
 		%meta{'http-equiv'=>'Content-type', 'content'=>'text/html;charset=UTF-8'}
 		%meta{'name'=>'viewport', 'content'=>'width=device-width, initial-scale=1.0'}
 		%title RageCo.
-		%link{'href'=>'http://cdn.rageco.info/css/bootstrap.min.css', 'rel'=>'stylesheet', 'media'=>'screen'}
+		%link{:href=>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", :rel=>"stylesheet"}
 		%link{'href'=>'http://cdn.rageco.info/css/rc.css','rel'=>'stylesheet','media'=>'screen'}
 		%link{'href'=>'http://cdn.rageco.info/favicon.ico','rel'=>'shortcut icon'}
 	%body
@@ -16,24 +16,26 @@
 					%li{'class'=>@activeTab == 'about' && 'active'}
 						%a{'href'=>'/about'} About
 					%li
-						%a{'href'=>'#aboutModal','data-toggle'=>'modal','role'=>'button'} Contact
+						%a{'href'=>'#aboutModal','data-toggle'=>'modal','role'=>'button','data-target'=>'#aboutModal'} Contact
 					%li
 						%a{'href'=>'http://blog.rageco.info'} Blog
 				%h3{'class'=>'muted'} Rage Co
 			%hr
 			=yield
 		%div{'id'=>"contactTempl"}
-			%div{'class'=>'modal hide fade','id'=>'aboutModal'}
-				%div{'class'=>'modal-header'}
-					%button{'type'=>'button','class'=>'close','data-dismiss'=>'modal', 'aria-hidden'=>'true'} &times;
-					%h3 Contact
-				%div{'class'=>'modal-body'}
-					%p
-						Either shot me an email at 
-						%a{'href'=>'mailto:roar109@rageco.info'} roar109@rageco.info
-						or because I don't like beer you can buy me a Coke.
-				%div{'class'=>'modal-footer'} 
-					%a{'href'=>'#aboutModal','class'=>'btn','data-dismiss'=>'modal'} Close
+			%div{'class'=>'modal fade','id'=>'aboutModal','tabindex'=>'-1','role'=>'dialog', 'aria-labelledby'=>'aboutModal','aria-hidden'=>'true'}
+				%div{'class'=>'modal-dialog modal-med'}
+					%div{'class'=>'modal-content'}
+						%div{'class'=>'modal-header'}
+							%button{'type'=>'button','class'=>'close','data-dismiss'=>'modal', 'aria-hidden'=>'true'} &times;
+							%h3 Contact
+						%div{'class'=>'modal-body'}
+							%p
+								Either shot me an email at 
+								%a{'href'=>'mailto:roar109@rageco.info'} roar109@rageco.info
+								or because I don't like beer you can buy me a Coke.
+						%div{'class'=>'modal-footer'} 
+							%a{'href'=>'#aboutModal','class'=>'btn','data-dismiss'=>'modal'} Close
 
 		%script{'src'=>'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'}
-		%script{'src'=>'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js'}
+		%script{:src=>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
