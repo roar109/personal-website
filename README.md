@@ -1,2 +1,2 @@
-Personal web site made with sinatra and haml
-==========
+### Personal web site made with sinatra and haml
+
