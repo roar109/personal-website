@@ -15,6 +15,11 @@ get '/about' do
 	haml :about
 end
 
+get '/random' do
+	rannum = rand(1..20) 
+	"#{rannum}"
+end
+
 not_found do
   haml :'404'
 end
