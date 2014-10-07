@@ -5,6 +5,10 @@ require 'haml'
 set :bind=>'0.0.0.0'
 disable :logging
 
+before do
+  cache_control :public, :must_revalidate, :max_age => 60
+end
+
 get '/' do
 	@activeTab='root'
 	haml :index
@@ -13,11 +17,6 @@ end
 get '/about' do
 	@activeTab='about'
 	haml :about
-end
-
-get '/random' do
-	rannum = rand(1..20) 
-	"#{rannum}"
 end
 
 not_found do
