@@ -31,13 +31,13 @@
 						%div{'class'=>'modal-footer'} 
 							%a{'href'=>'#aboutModal','class'=>'btn','data-dismiss'=>'modal'} Close
 
-		%script{'src'=>'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js'}
+		%script{'src'=>'//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'}
 		%script{:src=>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
 		%script
 			:plain
 				var cb = function() {
-				var rc = document.createElement('link'); rc.rel = 'stylesheet'; rc.href = 'http://cdn.hmendoza.com/css/rc.css';rc.media='screen';
-				var ic = document.createElement('link'); ic.rel = 'shortcut icon'; ic.href = 'http://cdn.hmendoza.com/favicon.ico'; 
+				var rc = document.createElement('link'); rc.rel = 'stylesheet'; rc.href = '//cdn.hmendoza.com/css/rc.css';rc.media='screen';
+				var ic = document.createElement('link'); ic.rel = 'shortcut icon'; ic.href = '//cdn.hmendoza.com/favicon.ico'; 
 				var bt = document.createElement('link'); bt.rel = 'stylesheet'; bt.href = '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css';
 				var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(rc, h); h.parentNode.insertBefore(ic, h); h.parentNode.insertBefore(bt, h);
 				};
