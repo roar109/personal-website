@@ -1,0 +1,1 @@
+Our body, our language, our voice all is full of litle emotions that affect our way we talk, walk and so on
