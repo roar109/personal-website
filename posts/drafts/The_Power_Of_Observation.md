@@ -1,3 +1,5 @@
+# The power of observation #
+
 Is easy to have a conversation with someone but what is not easy is to really be aware of the path that is going to follow: akward silence, self-talking people, egocentric maniacs, passive talkers; all kinds of people are well known types of chatty, so the problem is we can detect that kind of people before or while we are talking?
 
 Here comes in the play the power of observation, is simple to know the gestures, the mods, the voice level of a person while is talking, but know why is talking in that way, what is he/she trying to do or to share with you is not so easy.
