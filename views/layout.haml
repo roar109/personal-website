@@ -15,6 +15,8 @@
 						%a{'href'=>'/about'} About
 					%li
 						%a{'href'=>'#aboutModal','data-toggle'=>'modal','role'=>'button','data-target'=>'#aboutModal'} Contact
+					%li{'class'=>@activeTab == 'blog' && 'active'}
+						%a{'href'=>'//blog.hmendoza.com'} Blog
 				%h3{'class'=>'muted'} Hector Mendoza
 			%hr
 			=yield
