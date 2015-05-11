@@ -3,6 +3,9 @@
 	%head
 		%meta{'http-equiv'=>'Content-type', 'content'=>'text/html;charset=UTF-8'}
 		%meta{'name'=>'viewport', 'content'=>'width=device-width, initial-scale=1.0'}
+		%link{'href'=>'//cdn.hmendoza.com/css/rc.css', 'rel' => 'stylesheet'}
+		%link{'href'=>'//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', 'rel' => 'stylesheet'}
+		%link{'href'=>'//cdn.hmendoza.com/favicon.ico', 'rel' => 'shortcut icon'}
 		%title Hector Mendoza
 
 	%body
@@ -16,7 +19,7 @@
 					%li
 						%a{'href'=>'#aboutModal','data-toggle'=>'modal','role'=>'button','data-target'=>'#aboutModal'} Contact
 					%li{'class'=>@activeTab == 'blog' && 'active'}
-						%a{'href'=>'//blog.hmendoza.com'} Blog
+						%a{'href'=>'https://blog.hmendoza.com'} Blog
 				%h3{'class'=>'muted'} Hector Mendoza
 			%hr
 			=yield
@@ -35,12 +38,4 @@
 
 		%script{'src'=>'//cdn.hmendoza.com/js/jquery.min.js'}
 		%script{'src'=>'//cdn.hmendoza.com/js/bootstrap.min.js'}
-		%script
-			:plain
-				var cb = function() {
-				var rc = document.createElement('link'); rc.rel = 'stylesheet'; rc.href = '//cdn.hmendoza.com/css/rc.css';rc.media='screen';
-				var ic = document.createElement('link'); ic.rel = 'shortcut icon'; ic.href = '//cdn.hmendoza.com/favicon.ico'; 
-				var bt = document.createElement('link'); bt.rel = 'stylesheet'; bt.href = '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css';
-				var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(rc, h); h.parentNode.insertBefore(ic, h); h.parentNode.insertBefore(bt, h);
-				};
-				var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; if (raf) raf(cb);else window.addEventListener('load', cb);
+		
