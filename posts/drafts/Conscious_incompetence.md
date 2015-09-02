@@ -1,8 +1,9 @@
 # Conscious Incompetence
 
-Have expertise in a subject is a common way of have a job, if you have more than one, you can split it in several jobs/tasks and some of them can become hobbies. However most of those skills never see the light of the day, you use that just in rare occasions when you help someone with a task/homework etc. our mind knows that we have that skill but we don't know why or when we will need nor use it.
+Some time ago I start staring at some coworkers when they are trying to solve an issue and I came with the realization that your solving experience is not always helpful, is part of a complete solution that your brain does, even if you did something a day before now you are facing the same problem and you don't know how to solve it - but you should - the knowledge you got in that moment is not clear or was not interesting enough to remember it or try to improve it and so on.
 
-I found an interesting article talking about this topic, the author suggest some categories or stages of competence,....
+
+I take this four stages of competence from a post I like, this stages are what I was trying to identify some time ago:
 
 **Four stages of competence:**
 
