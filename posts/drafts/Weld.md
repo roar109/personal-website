@@ -20,12 +20,12 @@ To use in a Web environment just add a `beans.xml` file in your `WEB-INF` folder
 
 Use this maven dependency:
 
-`<dependency>
-   <groupId>javax.enterprise</groupId>
-   <artifactId>cdi-api</artifactId>
-   <version>1.2</version>
-   <scope>provided</scope>
-</dependency>`
+	<dependency>
+		<groupId>javax.enterprise</groupId>
+		<artifactId>cdi-api</artifactId>
+		<version>1.2</version>
+		<scope>provided</scope>
+	</dependency>`
 
 With this 2 options you are ready to go (I asume you already import the java ee dependencies)
 
