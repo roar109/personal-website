@@ -12,7 +12,7 @@
 ### Overview
 What is CDI? is the Java standard for dependency injection and contextual life cycle management and one of the most important and popular parts of the Java EE platform (JSR-346, JSR-299). Weld is the reference implementation of Java CDI and is used in the following topics.
 
-I have been working with CDI for some months as a replace for Spring to make it more portable and dependency-free. My first thought is that is like EJB and this argument is not totally true nor false although is a combination of files and annotations to work as a complete set of components with a life cycle and a simple way of injection; problems came with complex examples fortunately my requirements were simple and I tackle easily.
+I have been working with CDI for some months as a replace for Spring to make it more portable and dependency-free. My first thought is that is like EJB and this argument is not totally true nor false, although a combination of files and annotations to work as a complete set of components with a life cycle and a simple way of injection; problems came with complex examples fortunately my requirements were simple and I tackle easily.
 
 My comments in the next sections were used in a JBoss EAP Web environment with JAX-RS and JAX-WS using Maven as dependency manager.
 
@@ -55,13 +55,13 @@ This injection of an object instance is made at object-construct time this means
 
 `@Inject Instance<Foo> fooSource;`
 
-Then in your method just call the `get()` each call to get will get you a different proxy object.
+Then in your method just call the `get()`. Each call to get will get you a different proxy object.
 
 `Foo p = fooSource.get();`
 
 ## Qualifiers
 
-By default when you use the @Inject annotation will search for a definition of the bean and create a proxy-instance, so what happen if we have more than one implementation of a class by default CDI will use the @Any or @Default annotations to label the bean classes. @Any is by default in all the CDI beans and overwrite the @Default. There is a way of define our Qualifiers to use in a more fashion way:
+By default when you use the @Inject annotation will search for a definition of the bean and create a proxy-instance, so what happen if we have more than one implementation of a class by default CDI will use the @Any or @Default annotations to label the bean classes. @Any is by default in all the CDI beans and overwrite the @Default. There is a way of define our Qualifiers to use in a  fashion way:
 
 Suppose we have this 2 beans:
 
@@ -98,7 +98,7 @@ You can also declare the beans in the `beans.xml` to fix ambiguous dependencies,
 
 ## Producers
 
-You can create Producers methods that will create instances of a bean likewise this is using the `@Produces` annotation in a method, a common case where we can use this is a Logger of course is something you want to use in every bean class, for example (Take from the documentation):
+You can create Producers methods that will create instances of a bean likewise this is using the `@Produces` annotation in a method, a common case where we can use this is a Logger of course is something you want to use in every bean class, for example (Taken from the documentation):
 
 	import javax.enterprise.inject.spi.InjectionPoint;
 	import javax.enterprise.inject.Produces;
@@ -117,14 +117,14 @@ Note the `InjectionPoint` parameter refers to a meta data object of the injected
 
 ## Threads
 
-By default the specification said: "The injection can't go across new threads" so, is single threaded. This is something I don't like about the CDI but my case I found a quick workaround passing the objects as reference in the new threads with the `instanceOfAclass.get()`.
+By default the specification says: "The injection can't go across new threads" so, is single threaded. This is something I don't like about the CDI but my case I found a quick workaround passing the objects as reference in the new threads with the `instanceOfAclass.get()`.
 
-The specification said that in case you want to connect to an existing contexts you can do it if you are using Conversation or Session scopes. Its defined in the FAQ first option.
+The specification says that in case you want to connect to an existing contexts you can do it if you are using Conversation or Session scopes. This is defined in the FAQ first option.
 
 ## Conclusions
 
-As I describe at the beginning of the post I use CDI with JAX-RS and JAX-WS without any problem for simple solutions, for complex options I would recommend to build components or extensions, for example one coworker build a simple component to inject properties notably he uses the same CDI annotations with the Qualifier-extra-annotations and works seamless (even if you have your beans.xml at the WEB-INF you need to add it to the jar to be pickup by the weld container). This forces you to create or look for your own tools instead of have a big all-in-one solution like spring. In conclusion I like it, but for big applications maybe can cause more work that it suppose to accomplish.
+As I described at the beginning of the post I used CDI with JAX-RS and JAX-WS without any problems for simple solutions, for complex options I would recommend to build components or extensions, for example one coworker build a simple component to inject properties notably he uses the same CDI annotations with the Qualifier-extra-annotations and works seamlessly (even if you have your beans.xml at the WEB-INF you need to add it to the jar to be pickup by the weld container). This forces you to create or look for your own tools instead of have a big all-in-one solution like Spring. In conclusion I like it, but for big applications maybe can cause more maintenance work that it supposed to accomplish.
 
-I miss a lot of Weld configurations and functionality furthermore you can check it in the official documentation. This was based in my personal experience.
+I missed a lot of Weld configurations and functionality. For further information you can check the official JBoss documentation. This was based in my personal experience.
 
 [Weld Home Page](http://weld.cdi-spec.org/)
