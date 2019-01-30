@@ -19,6 +19,10 @@ get '/about' do
 	haml :about
 end
 
+get '/civic' do
+	haml :civic
+end
+
 not_found do
   haml :'404'
 end
