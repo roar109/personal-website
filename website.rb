@@ -3,6 +3,8 @@ require 'sinatra'
 require 'haml'
 
 set :bind=>'0.0.0.0'
+set :port=>'80'
+set :public_folder, File.dirname(__FILE__)+'/static'
 disable :logging
 
 before do
@@ -21,6 +23,10 @@ end
 
 get '/civic' do
 	haml :civic
+end
+
+get '/status' do
+	redirect '/statuspage/index.html'
 end
 
 not_found do
