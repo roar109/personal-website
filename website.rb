@@ -20,10 +20,6 @@ get '/about' do
 	haml :about
 end
 
-get '/civic' do
-	haml :civic
-end
-
 get '/status' do
 	redirect '/statuspage/index.html'
 end
